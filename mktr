@@ -1,0 +1,6 @@
+#! /usr/bin/env ruby
+
+require "drb/drb"
+
+main = DRbObject.new_with_uri("druby://localhost:39311")
+print main.eval(STDIN.read)
